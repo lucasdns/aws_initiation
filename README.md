@@ -10,5 +10,9 @@
 <img width="616" alt="Capture d’écran 2023-11-23 à 12 17 41" src="https://github.com/lucasdns/aws_initiation/assets/74400487/3312a8ca-c837-418f-b5a9-c8f8a05cd8f2">
 <img width="597" alt="Capture d’écran 2023-11-23 à 12 17 50" src="https://github.com/lucasdns/aws_initiation/assets/74400487/32821e0e-0537-4772-a30c-97754a80c8d5">
 <img width="706" alt="Capture d’écran 2023-11-23 à 12 17 58" src="https://github.com/lucasdns/aws_initiation/assets/74400487/5c003c18-aa1c-4e5e-93f6-36c03cf657cc">
+<img width="686" alt="Capture d’écran 2023-11-23 à 13 12 50" src="https://github.com/lucasdns/aws_initiation/assets/74400487/69f3588e-c94a-4992-a69e-b7c9d8c7900d">
+<img width="700" alt="Capture d’écran 2023-11-23 à 13 12 59" src="https://github.com/lucasdns/aws_initiation/assets/74400487/297e94ce-ee65-4606-b4dd-c478bfffc336">
+<img width="630" alt="Capture d’écran 2023-11-23 à 13 13 13" src="https://github.com/lucasdns/aws_initiation/assets/74400487/c31fb7b8-9422-42a9-9891-cd14504429c1">
+<img width="643" alt="Capture d’écran 2023-11-23 à 13 13 21" src="https://github.com/lucasdns/aws_initiation/assets/74400487/64184b9e-a088-4c56-b604-6f1bc339aeca">
 
 
