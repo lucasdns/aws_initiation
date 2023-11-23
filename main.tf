@@ -2,22 +2,39 @@ provider "aws" {
   region = "us-west-1"
 }
 
-resource "aws_vpc" "my_vpc" {
- cidr_block = "10.0.0.0/16"
- enable_dns_support = true
- enable_dns_hostnames = true
+resource "aws_key_pair" "my_key_pair" {
+ key_name   = "lucas_key"
+ public_key = file("~/.ssh/id_rsa.pub")
+}
 
- tags = {
-   Name = "MonVPC"
+resource "aws_security_group" "my_security_group" {
+ name        = "lucas_group"
+ description = "Allow incoming HTTP traffic"
+
+ ingress {
+   from_port = 80
+   to_port   = 80
+   protocol  = "tcp"
+   cidr_blocks = ["0.0.0.0/0"]
  }
 }
 
-resource "aws_subnet" "my_subnet" {
- vpc_id                  = aws_vpc.my_vpc.id
- cidr_block              = "10.0.1.0/24"
- map_public_ip_on_launch = true
+resource "aws_instance" "my_instance" {
+ ami           = "ami-0aafdae616ee7c9b7"
+ instance_type = "t2.micro"
+ key_name      = aws_key_pair.my_key_pair.key_name
+ vpc_security_group_ids = [aws_security_group.my_security_group.id]
+
+ user_data = <<-EOF
+             #!/bin/bash
+             apt update
+             apt install -y apache2
+             echo "Hello Terraform" > /var/www/html/index.html
+             systemctl start apache2
+             systemctl enable apache2
+             EOF
 
  tags = {
-   Name = "MonRéseau"
+   Name = "MyEC2Instance"
  }
 }
